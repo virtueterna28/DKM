@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takmir Masjid Baiturrohmah - Ar-Rohmah Putra</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#233686',
+                            dark: '#182561',
+                            light: '#324bb5',
+                            gold: '#D4AF37',
+                            accent: '#F39C12'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .custom-gradient {
+            background: linear-gradient(135deg, #233686 0%, #121c47 100%);
+        }
+        .social-card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .social-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px -10px rgba(35, 54, 134, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand selection:text-white">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-[#233686] text-white shadow-lg transition-all duration-300" id="main-header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo & Brand Name -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <img src="https://github.com/virtueterna28/DKM/blob/main/takmir%20logo.png?raw=true" 
+                         alt="Logo Takmir Masjid Baiturrohmah" 
+                         class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                         onerror="this.onerror=null; this.src='https://placehold.co/100x100/233686/ffffff?text=Takmir';">
+                    <div class="flex flex-col">
+                        <span class="font-heading text-lg sm:text-xl font-bold tracking-wide leading-tight group-hover:text-amber-300 transition-colors">
+                            TAKMIR MASJID BAITURROHMAH
+                        </span>
+                        <span class="text-xs text-blue-200 font-medium tracking-wider uppercase">
+                            Ponpes Ar-Rohmah Putra
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="#home" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 hover:text-amber-300 transition">Beranda</a>
+                    <a href="#tentang" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 hover:text-amber-300 transition">Tentang</a>
+                    <a href="#pengurus" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 hover:text-amber-300 transition">Pengurus</a>
+                    <a href="#media-sosial" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 hover:text-amber-300 transition">Media Sosial</a>
+                    <a href="#kontak" class="px-3 py-2 rounded-lg text-sm font-medium hover:bg-white/10 hover:text-amber-300 transition">Kontak</a>
+                    <a href="#kontak" class="ml-2 px-5 py-2.5 rounded-full bg-amber-400 text-[#233686] font-semibold text-sm hover:bg-amber-300 hover:shadow-lg transition duration-300 transform hover:-translate-y-0.5">
+                        Hubungi Kami
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="p-2 rounded-md text-blue-200 hover:text-white hover:bg-white/10 focus:outline-none" aria-label="Menu Toggle">
+                        <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div class="hidden md:hidden bg-[#182561] border-t border-blue-900/50 px-4 pt-2 pb-4 space-y-2" id="mobile-menu">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Beranda</a>
+            <a href="#tentang" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Tentang</a>
+            <a href="#pengurus" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Pengurus</a>
+            <a href="#media-sosial" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Media Sosial</a>
+            <a href="#kontak" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10">Kontak</a>
+            <a href="#kontak" class="block w-full text-center mt-3 px-4 py-2.5 rounded-xl bg-amber-400 text-[#233686] font-bold text-sm hover:bg-amber-300">
+                Hubungi Kami
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section id="home" class="relative bg-gray-900 overflow-hidden h-[520px] sm:h-[620px] md:h-[680px]">
+        <!-- Image Slider Container -->
+        <div id="slider-container" class="relative w-full h-full">
+            <!-- Slide 1 -->
+            <div class="slide absolute inset-0 opacity-100 transition-opacity duration-1000 ease-in-out">
+                <img src="https://github.com/virtueterna28/DKM/blob/main/1.png?raw=true" alt="Banner 1 Takmir Baiturrohmah" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/233686/ffffff?text=Takmir+Masjid+Baiturrohmah';">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://github.com/virtueterna28/DKM/blob/main/2.png?raw=true" alt="Banner 2 Takmir Baiturrohmah" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/182561/ffffff?text=Kegiatan+Takmir';">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide absolute inset-0 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <img src="https://github.com/virtueterna28/DKM/blob/main/5.png?raw=true" alt="Banner 3 Takmir Baiturrohmah" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/1200x600/324bb5/ffffff?text=Masjid+Baiturrohmah';">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
+            </div>
+        </div>
+
+        <!-- Overlay Hero Text Content -->
+        <div class="absolute inset-0 flex items-center z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="max-w-2xl text-white space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-amber-400/20 border border-amber-300/40 text-amber-300 text-xs sm:text-sm font-semibold tracking-wider uppercase backdrop-blur-md">
+                        Organisasi Pemakmuran Masjid
+                    </span>
+                    <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-md">
+                        Memakmurkan Masjid, <br class="hidden sm:inline"><span class="text-amber-400">Membina Generasi Rabbani</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-200 leading-relaxed font-light max-w-xl">
+                        Selamat datang di portal resmi Takmir Masjid Baiturrohmah LPI Ar-Rohmah Putra. Mewujudkan masjid sebagai pusat ibadah, peradaban, dan pembentukan karakter santri mulia.
+                    </p>
+                    <div class="pt-2 flex flex-wrap gap-4">
+                        <a href="#kontak" class="px-7 py-3.5 rounded-xl bg-amber-400 text-[#233686] font-bold hover:bg-amber-300 shadow-xl hover:shadow-amber-400/20 transition duration-300 transform hover:-translate-y-1 flex items-center gap-2">
+                            <span>Hubungi Kami</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#tentang" class="px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold backdrop-blur-md border border-white/30 transition duration-300">
+                            Pelajari Lebih Lanjut
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <button id="prevSlide" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+        <button id="nextSlide" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-black/40 hover:bg-black/70 text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+
+        <!-- Slider Indicators -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex space-x-3" id="slider-dots">
+            <button class="dot w-8 h-2.5 rounded-full bg-amber-400 transition-all duration-300" aria-label="Slide 1"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 2"></button>
+            <button class="dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all duration-300" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- Tentang Takmir Section -->
+    <section id="tentang" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Text Side -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 text-[#233686] font-semibold text-sm tracking-wider uppercase">
+                        <span class="w-8 h-0.5 bg-[#233686]"></span>
+                        <span>Tentang Kami</span>
+                    </div>
+                    <h2 class="font-heading text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+                        Mengabdi untuk Ketaatan dan Pemakmuran Masjid
+                    </h2>
+                    <p class="text-gray-600 text-base sm:text-lg leading-relaxed justify-text">
+                        Takmir masjid atau Amaratul masjid merupakan Organisasi pemakmuran masjid dalam upaya, kegiatan, perbuatan meramaikan, dan menyemarakaan masjid dengan kegiatan keagamaan yang dapat membawa seseorang kepada Ridha dan rahmat Allah SWT.
+                    </p>
+                    
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl bg-blue-50/60 border border-blue-100 flex items-start space-x-3">
+                            <div class="p-2.5 bg-[#233686] text-amber-400 rounded-lg">
+                                <i class="fa-solid fa-mosque text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Pusat Kebajikan</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">Menyelenggarakan kegiatan keagamaan secara berkelanjutan.</p>
+                            </div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-amber-50/60 border border-amber-100 flex items-start space-x-3">
+                            <div class="p-2.5 bg-amber-500 text-white rounded-lg">
+                                <i class="fa-solid fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Pembinaan Santri</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">Membentuk kepemimpinan dan karakter islami berjiwa muda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image Side -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative Backdrop Card -->
+                        <div class="absolute -inset-3 bg-gradient-to-r from-[#233686] to-amber-400 rounded-3xl blur-lg opacity-30 transform rotate-2"></div>
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/masjid.jpg?raw=true" 
+                                 alt="Masjid Baiturrohmah Ar-Rohmah Putra" 
+                                 class="w-full h-80 sm:h-96 object-cover hover:scale-105 transition duration-700"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/600x800/233686/ffffff?text=Masjid+Baiturrohmah';">
+                            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6 text-white">
+                                <p class="font-heading text-lg font-bold">Masjid Baiturrohmah</p>
+                                <p class="text-xs text-amber-300">Pondok Pesantren Ar-Rohmah Putra</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mosque Overview Showcase Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative rounded-3xl overflow-hidden shadow-xl group border border-gray-200">
+                <img src="https://i.ibb.co.com/Kzsn6L9n/Untitled-design.jpg" 
+                     alt="Lingkungan Masjid Baiturrohmah" 
+                     class="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-700 group-hover:scale-102"
+                     onerror="this.onerror=null; this.src='https://placehold.co/1200x400/233686/ffffff?text=Masjid+Baiturrohmah+Overview';">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#233686]/80 via-transparent to-transparent flex items-end p-6 sm:p-10">
+                    <div class="text-white max-w-xl">
+                        <span class="text-amber-300 font-semibold text-xs sm:text-sm tracking-widest uppercase">Lingkungan Pesantren</span>
+                        <h3 class="font-heading text-xl sm:text-3xl font-bold mt-1">Kemegahan dan Keheningan Ibadah</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Struktur Keanggotaan Section -->
+    <section id="pengurus" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="text-[#233686] font-semibold text-sm tracking-widest uppercase bg-blue-100/60 px-4 py-1.5 rounded-full">
+                    Struktur Organisasi
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-gray-900">
+                    Pengurus Inti Takmir Masjid
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base">
+                    Sinergi pemuda bertalenta yang berdedikasi tinggi dalam memakmurkan Masjid Baiturrohmah.
+                </p>
+            </div>
+
+            <!-- Grid Cards Pengurus Inti -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Ketua Umum -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/arya.jpg?raw=true" 
+                                 alt="Muhammad Isyan Aryasatya" 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Arya';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Ketua Umum
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Muhammad Isyan Aryasatya
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/isyanzzz_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@isyanzzz_</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Wakil Ketua Umum -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/khalid.jpg?raw=true" 
+                                 alt="Muhammad Khalid Assauri" 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Khalid';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Wakil Ketua Umum
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Muhammad Khalid Assauri
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/khld_assauri/tagged/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@khld_assauri</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Sekretaris Bendahara Umum -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/Ammar.jpg?raw=true" 
+                                 alt="Muhammad Dzaky Ammar" 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Ammar';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Sekretaris Bendahara Umum
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Muhammad Dzaky Ammar
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/dzakmarr/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@dzakmarr</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Kabid Tata Tertib -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/ahyan%20risky.jpg?raw=true" 
+                                 alt="Muhammad Ahyan Risky" 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Ahyan';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Kadep. Tata Tertib
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Muhammad Ahyan Risky
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/ahyan.rzky/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>ahyan.rzky</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 5: Kadep Humas -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md flex items-center justify-center bg-blue-100">
+                            <i class="fa-solid fa-user-tie text-5xl text-[#233686]"></i>
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Kadep. Humas
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Ahmad Dino Habibie
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/dinohbb_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@dinohbb_</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 6: Divisi Amal & Sedekah -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/IMG_20260331_201037_635.jpg?raw=true" 
+                                 alt="M. Shaffa Revolusi A." 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Shaffa';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Divisi Amal & Sedekah
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            M. Shaffa Revolusi A.
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/m.srevolusia/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@m.srevolusia</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 7: Kadep Tarbiyah -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/Liwa%20el.%20naser.jpg?raw=true" 
+                                 alt="Liwa El Nashr Mubarok" 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Liwa';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Kadep. Tarbiyah
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Liwa El Nashr Mubarok
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/liwaael_/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@liwaael_</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 8: Divisi Rohani Islam -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/IMG_20260331_201256_361.jpg?raw=true" 
+                                 alt="Muhammad Dzaky Al Fajry" 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Dzaky';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Divisi Rohani Islam
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Muhammad Dzaky Al Fajry
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/dzaaaaaky/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@dzaaaaaky</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 9: Kadep Seni & Kreasi -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 group flex flex-col justify-between">
+                    <div class="p-6 text-center">
+                        <div class="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden p-1 bg-gradient-to-tr from-[#233686] to-amber-400 group-hover:scale-105 transition duration-300 shadow-md">
+                            <img src="https://github.com/virtueterna28/DKM/blob/main/foto/abhipraya%20damas.jpg?raw=true" 
+                                 alt="Abhipraya Damas Okta Ardana" 
+                                 class="w-full h-full object-cover rounded-full"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/233686/ffffff?text=Damas';">
+                        </div>
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-[#233686] mb-2 border border-blue-100">
+                            Kadep. Seni & Kreasi
+                        </span>
+                        <h3 class="font-heading text-lg font-bold text-gray-900 group-hover:text-[#233686] transition">
+                            Abhipraya Damas Okta A.
+                        </h3>
+                    </div>
+                    <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-center">
+                        <a href="https://www.instagram.com/rayfin_cruise/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-sm text-gray-600 hover:text-pink-600 font-medium transition">
+                            <i class="fa-brands fa-instagram text-lg text-pink-500"></i>
+                            <span>@rayfin_cruise</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Sosial Ketakmiran Section -->
+    <section id="media-sosial" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+                <span class="text-amber-600 font-semibold text-sm tracking-widest uppercase bg-amber-50 px-4 py-1.5 rounded-full border border-amber-200">
+                    Koneksi & Informasi
+                </span>
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-gray-900">
+                    Media Sosial Takmir
+                </h2>
+                <p class="text-gray-600 text-sm sm:text-base">
+                    Ikuti terus dokumentasi kegiatan, informasi kajian, serta karya pemakmuran masjid kami melalui kanal resmi berikut.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Instagram Card -->
+                <a href="https://www.instagram.com/takmir.baiturrohmah/" target="_blank" rel="noopener noreferrer" 
+                   class="social-card-hover p-8 rounded-2xl bg-gradient-to-br from-pink-50/50 via-purple-50/30 to-white border border-pink-100 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 mb-5 flex items-center justify-center rounded-2xl bg-white shadow-md group-hover:scale-110 transition duration-300">
+                        <img src="https://i.ibb.co.com/SXfnj442/ig.png" 
+                             alt="Instagram Takmir" 
+                             class="w-12 h-12 object-contain"
+                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/e1306c/ffffff?text=IG';">
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-gray-900 group-hover:text-pink-600 transition">Instagram</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-medium">@takmir.baiturrohmah</p>
+                    <span class="mt-6 px-4 py-2 rounded-xl bg-pink-600 text-white text-xs font-semibold shadow-sm group-hover:bg-pink-700 transition">
+                        Kunjungi Profile <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                    </span>
+                </a>
+
+                <!-- TikTok Card -->
+                <a href="https://www.tiktok.com/@takmir.baiturrohmah" target="_blank" rel="noopener noreferrer" 
+                   class="social-card-hover p-8 rounded-2xl bg-gradient-to-br from-gray-50 via-slate-100/50 to-white border border-gray-200 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 mb-5 flex items-center justify-center rounded-2xl bg-white shadow-md group-hover:scale-110 transition duration-300">
+                        <img src="https://i.ibb.co.com/rRsMT240/tiktok.png" 
+                             alt="TikTok Takmir" 
+                             class="w-12 h-12 object-contain"
+                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/000000/ffffff?text=TikTok';">
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-gray-900 group-hover:text-black transition">TikTok</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-medium">@takmir.baiturrohmah</p>
+                    <span class="mt-6 px-4 py-2 rounded-xl bg-gray-900 text-white text-xs font-semibold shadow-sm group-hover:bg-black transition">
+                        Ikuti TikTok <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                    </span>
+                </a>
+
+                <!-- YouTube Card -->
+                <a href="https://www.youtube.com/@TakmirMasjidBaiturrohmah" target="_blank" rel="noopener noreferrer" 
+                   class="social-card-hover p-8 rounded-2xl bg-gradient-to-br from-red-50/50 via-orange-50/20 to-white border border-red-100 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 mb-5 flex items-center justify-center rounded-2xl bg-white shadow-md group-hover:scale-110 transition duration-300">
+                        <img src="https://i.ibb.co.com/tMrZjRZx/yt.png" 
+                             alt="YouTube Takmir" 
+                             class="w-12 h-12 object-contain"
+                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/ff0000/ffffff?text=YT';">
+                    </div>
+                    <h3 class="font-heading text-xl font-bold text-gray-900 group-hover:text-red-600 transition">YouTube Channel</h3>
+                    <p class="text-sm text-gray-500 mt-1 font-medium">Takmir Masjid Baiturrohmah</p>
+                    <span class="mt-6 px-4 py-2 rounded-xl bg-red-600 text-white text-xs font-semibold shadow-sm group-hover:bg-red-700 transition">
+                        Subscribe Channel <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-[10px]"></i>
+                    </span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="kontak" class="bg-[#233686] text-white pt-16 pb-8 border-t-4 border-amber-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-blue-900">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <img src="https://github.com/virtueterna28/DKM/blob/main/takmir%20logo.png?raw=true" 
+                             alt="Logo Takmir" 
+                             class="h-12 w-auto bg-white/10 rounded-lg p-1"
+                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/ffffff/233686?text=Logo';">
+                        <div>
+                            <h3 class="font-heading text-lg font-bold tracking-wide">TAKMIR MASJID BAITURROHMAH</h3>
+                            <p class="text-xs text-amber-300 uppercase font-medium">Pondok Pesantren Ar-Rohmah Putra</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-blue-200 leading-relaxed font-light">
+                        Organisasi pemakmuran masjid dalam upaya meramaikan dan menyemarakkan masjid dengan kegiatan keagamaan demi menggapai Ridha dan Rahmat Allah SWT.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="lg:col-span-3 space-y-3">
+                    <h4 class="font-heading text-base font-semibold text-amber-400 uppercase tracking-wider">Tautan Pintas</h4>
+                    <ul class="space-y-2 text-sm text-blue-100">
+                        <li><a href="#home" class="hover:text-amber-300 transition">Beranda Utama</a></li>
+                        <li><a href="#tentang" class="hover:text-amber-300 transition">Tentang Takmir</a></li>
+                        <li><a href="#pengurus" class="hover:text-amber-300 transition">Struktur Pengurus</a></li>
+                        <li><a href="#media-sosial" class="hover:text-amber-300 transition">Media Sosial Official</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Location Info -->
+                <div class="lg:col-span-4 space-y-3">
+                    <h4 class="font-heading text-base font-semibold text-amber-400 uppercase tracking-wider">Lokasi & Kontak</h4>
+                    <ul class="space-y-2.5 text-sm text-blue-100">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-amber-400"></i>
+                            <span>Kawasan LPI Ar-Rohmah Putra, Kec. Dau, Kabupaten Malang, Jawa Timur</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-amber-400"></i>
+                            <span>takmir.baiturrohmah@arrohmah.com</span>
+                        </li>
+                    </ul>
+                    <div class="pt-2">
+                        <a href="https://www.instagram.com/takmir.baiturrohmah/" target="_blank" class="inline-flex items-center px-4 py-2 rounded-lg bg-amber-400 text-[#233686] text-xs font-bold hover:bg-amber-300 transition">
+                            <i class="fa-brands fa-instagram text-sm mr-2"></i> Kirim Pesan DM
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-blue-300 space-y-4 sm:space-y-0">
+                <p>&copy; 2026 Takmir Masjid Baiturrohmah - Ar-Rohmah Putra. All Rights Reserved.</p>
+                <p class="font-light">Modern & Minimalist Islamic Portal</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slider & Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle Logic
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                }
+            });
+
+            // Smooth Scroll & Auto close menu
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        menuIcon.classList.remove('fa-xmark');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Image Slider Functionality
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.getElementById('prevSlide');
+            const nextBtn = document.getElementById('nextSlide');
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            let slideInterval;
+
+            function goToSlide(index) {
+                slides[currentSlide].classList.remove('opacity-100');
+                slides[currentSlide].classList.add('opacity-0');
+                
+                dots[currentSlide].classList.remove('w-8', 'bg-amber-400');
+                dots[currentSlide].classList.add('w-2.5', 'bg-white/50');
+
+                currentSlide = (index + slideCount) % slideCount;
+
+                slides[currentSlide].classList.remove('opacity-0');
+                slides[currentSlide].classList.add('opacity-100');
+
+                dots[currentSlide].classList.remove('w-2.5', 'bg-white/50');
+                dots[currentSlide].classList.add('w-8', 'bg-amber-400');
+            }
+
+            function nextSlide() {
+                goToSlide(currentSlide + 1);
+            }
+
+            function prevSlide() {
+                goToSlide(currentSlide - 1);
+            }
+
+            function startTimer() {
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            function resetTimer() {
+                clearInterval(slideInterval);
+                startTimer();
+            }
+
+            // Event Listeners for Slider
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetTimer();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetTimer();
+            });
+
+            dots.forEach((dot, idx) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(idx);
+                    resetTimer();
+                });
+            });
+
+            // Start Auto Slider
+            startTimer();
+        });
+    </script>
+</body>
+</html>
